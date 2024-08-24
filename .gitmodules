@@ -1,3 +1,3 @@
-[submodule "themes/abridge"]
-	path = themes/abridge
-	url = https://github.com/jieiku/abridge.git
+[submodule "themes/anemone"]
+	path = themes/anemone
+	url = https://github.com/Speyll/anemone.git
