@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to Velnbur's site!</h1>
+
+{{ section.content | safe }}
+
+<h2> Latest articles </h2>
+<ul>
+  {% set articles = get_section(path="articles/_index.md") -%}
+  {% for article in articles.pages | slice(end=5) %}
+  <li>
+    <a href="{{ article.permalink }}">{{ article.title }}</a>
+  </li>
+  {% endfor %}
+  <li>
+    <a href="{{ get_url(path='@/articles/_index.md') }}">...other articles</a>
+  </li>
+</ul>
+{% endblock content %}
